@@ -2,6 +2,7 @@ package SomePackageIDontCare;
 
 import java.awt.Color;
 import java.awt.Font;
+import java.awt.Image;
 import java.awt.Toolkit;
 import java.awt.datatransfer.Clipboard;
 import java.awt.datatransfer.StringSelection;
@@ -9,9 +10,14 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 
+import javax.imageio.ImageIO;
+import javax.print.DocFlavor.URL;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -36,8 +42,9 @@ public class SeedPaste implements KeyListener,ActionListener{
 		JFrame frame = new JFrame("SeedPaster V2.1 by Alexander Sørensen");
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setSize(800,300);
-		frame.setIconImage(Toolkit.getDefaultToolkit().getImage(getClass()
-				.getClassLoader().getResource("SeedPaster/resources/icon.png")));
+		Image icon = Toolkit.getDefaultToolkit().getImage("../res/icon/icon.png");  
+		frame.setIconImage(icon);
+		
 		int y = 50;
 		JLabel label4 = new JLabel("Players");
 		label4.setBounds(50,y-20, 200,20);
