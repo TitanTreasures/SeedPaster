@@ -101,12 +101,15 @@ public class SeedPaste implements KeyListener,ActionListener{
 		button1.setBounds(50,y*4+20, 100,20);
 		button1.addActionListener(this);
 		button1.addKeyListener(this);
+		JLabel label7 = new JLabel("Hint: Click on this window and 'Control + c' to copy the next seed");
+		label7.setBounds(200,y*4+20, 500,20); 
 		frame.getContentPane().add(label1);
 		frame.getContentPane().add(label2);
 		frame.getContentPane().add(label3);
 		frame.getContentPane().add(label4);
 		frame.getContentPane().add(label5);
 		frame.getContentPane().add(label6);
+		frame.getContentPane().add(label7);
 		frame.getContentPane().add(textField1);
 		frame.getContentPane().add(textField2);
 		frame.getContentPane().add(textField3);
