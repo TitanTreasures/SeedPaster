@@ -32,9 +32,12 @@ public class SeedPaste implements KeyListener,ActionListener{
 	Font font1 = new Font("Courier", Font.BOLD, 14);
 
 	public void SeedPasteRun(){
-		JFrame frame = new JFrame("SeedPaster");
+		
+		JFrame frame = new JFrame("SeedPaster V2.1 by Alexander Sørensen");
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setSize(800,300);
+		frame.setIconImage(Toolkit.getDefaultToolkit().getImage(getClass()
+				.getClassLoader().getResource("SeedPaster/resources/icon.png")));
 		int y = 50;
 		JLabel label4 = new JLabel("Players");
 		label4.setBounds(50,y-20, 200,20);
@@ -72,7 +75,7 @@ public class SeedPaste implements KeyListener,ActionListener{
 		JLabel label3 = new JLabel("Output:");
 		label3.setBounds(50,y*3-20, 150,20); 
 		textField3 = new JTextField();
-		textField3.setBounds(50,y*3, 700,50);
+		textField3.setBounds(50,y*3, 700,30);
 		textField3.setFont(new Font(textField3.getFont().getFontName(), Font.BOLD, textField3.getFont().getSize()));
 		textField3.setHorizontalAlignment(JTextField.CENTER);
 		textField3.addKeyListener(this);
